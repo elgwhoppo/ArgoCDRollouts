@@ -7,7 +7,7 @@ In this exercise we will deploy our first application using Argo CD CLI.
 Replace `<username>` with your GitHub username in the first command below.
 
 ```sh
-WORKSHOP_USER="<username>"
+WORKSHOP_USER="elgwhoppo"
 argocd --port-forward --port-forward-namespace argocd login
 argocd --port-forward-namespace argocd repo add "https://github.com/$WORKSHOP_USER/ArgoCDRollouts"
 argocd --port-forward-namespace argocd app create guestbook --repo "https://github.com/$WORKSHOP_USER/ArgoCDRollouts" --path manifests/ArgoCD101-GuestbookManifests --dest-namespace default --dest-server https://kubernetes.default.svc
